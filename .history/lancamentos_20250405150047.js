@@ -1,0 +1,3 @@
+class Lancamentos extends HTMLElement {
+    
+}

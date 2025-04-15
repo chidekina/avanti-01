@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <title>Avanti</title>
+  </head>
+  <body>
+    <header class="mb-2">
+      <h1 class="flex justify-center items-center bg-(--primary-color) text-white text-sm h-[30px] font-bold">
+        Ganhe
+        <b class="flex justify-center mx-1 bg-(--secondary-color) heigth-[16px] w-[64px] rounded-md">R$10,00</b>
+        de desconto no seu primeiro pedido. Utilize o cupom
+        <i class="font-normal ml-1">DESCONTO10</i>
+      </h1>
+      <div class="mt-3 mb-5 px-24 flex justify-between w-full">
+        <div class="flex gap-24">
+          <img src="./assets/logo.svg" alt="Avanti Logo" class="w-[152px]" />
+          <label>
+            <div class="flex justify-between py-2 border-2 border-solid border-(--bg-color) px-8 rounded-xl cursor-text w-[594px]">
+              <input type="text" placeholder="Digite aqui o que você procura" class="placeholder-black outline-none focus:placeholder-transparent w-1/2" />
+              <img src="./assets/search.svg" />
+            </div>
+          </label>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex gap-2 items-center">
+            <img src="./assets/user.svg" alt="icone do usuario" class="w-[24px]" />
+            <h6 class="leading-none font-semibold">
+              Olá,<br />
+              Nome cliente
+            </h6>
+          </div>
+          <div class="flex">
+            <img src="./assets/cart.svg" alt="imagem de um carrinho de compras" class="w-[32px]" />
+            <div class="relative bg-(--primary-color) w-[20px] h-[20px] text-center text-white text-[12px] rounded-full right-2">2</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex px-24 w-full">
+        <ul class="flex gap-9">
+          <a href="#">
+            <div class="flex gap-2">
+              <img src="./assets/menu-hamburger.svg" alt="menu hamburguer" />
+              <h5 class="font-bold">Todas as Categrias</h5>
+            </div>
+          </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="flex justify-center items-center w-full height-[510px] bg-(--bg-color) font-(--font-secondary)">
+        <img src="./assets/chair.svg" alt="Foto de uma cadeira com roupas dobradas em cima" />
+        <div class="flex flex-col gap-1 text-center">
+          <h1 class="text-[100px]"><b>SUPER</b>SALE</h1>
+          <h4 class="text-[25px] text-(--primary-color) font-bold tracking-widest">ITENS SELECIONADOS COM ATÉ</h4>
+          <h4 class="text-[60px] text-(--primary-color) font-bold">50%OFF</h4>
+        </div>
+      </section>
+<carousel-section></carousel-section>
+      </section>
+  <description-section></description-section>
+  <section class="flex w-full bg-(--bg-light) px-[200px] py-[42px] font-(--font-secondary) my-[40px]">
+    <div class="text-center text-(--text-color) w-1/2 mr-5">
+      <h1 class="text-[30px] font-bold mb-10">
+        Lorem ipsum
+      </h1>
+      <ul class="flex flex-col text-start gap-15">
+        <li class="flex gap-6">
+          <img src="./assets/pin.svg">
+          <p>
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+          </p>
+        </li>
+        <li class="flex gap-6">
+          <img src="./assets/pin.svg">
+          <p>
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+          </p>
+        </li>
+        <li class="flex gap-6">
+          <img src="./assets/pin.svg">
+          <p>
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
+          </p>
+        </li>
+      </ul>
+    </div>
+    <img src="./assets/banner.svg" alt="Foto da caneca da Avanti sobre uma tabua de vegetais" class="w-1/2">
+  </section>
+  <section>
+  <description-section></description-section>
+  <carousel-section></carousel-section>
+
+  </section>
+  <section>
+    <img src="./assets/banner2.svg" alt="Foto da entrada da loja da Avanti" />
+    <div class="absolute h-[126px] bg-(--primary-color) w-full bottom-[-3080px] text-white text-[30px] font-(--font-secondary)">
+      <h1 class="flex justify-center h-full items-center">Entre em contato conosco e verifique a disponibilidade para sua região!</h1>
+    </div>
+  </section>
+  <section class="flex flex-col my-[50px] gap-6 items-center">
+    <h2 class="font-bold text-center text-[20px]">
+      Cadastre-se na nossa <b class="text-(--primary-color)">newsletter</b>
+    </h2>
+    <div class="flex w-[1260px] h-[170px] items-center justify-center bg-(--bg-light) rounded-lg gap-6">
+      <input type="text" placeholder="Digite seu nome" class="outline-none rounded-lg bg-white placeholder:text-black w-[260px] h-[48px] focus:placeholder-transparent pl-4"/>
+      <input type="text" placeholder="Digite seu e-mail" class="outline-none rounded-lg bg-white placeholder:text-black w-[260px] h-[48px] focus:placeholder-transparent pl-4"/>
+      <div class="flex gap-1">
+      <input type="checkbox" />
+      <h5 class="text-[#656565] text-[12px] font-bold">Estou de acordo com a <a href="#" class="underline">Política de Privacidade</a></h5>
+    </div>
+    </div>
+  </section>
+  <section class="text-center px-[200px] py-[64px] bg-(--bg-lighter)">
+    <div class="flex justify-around mb-10">
+    <div class="flex flex-col gap-5">
+      <img src="./assets/logo.svg" alt="Logo Avanti" />
+      <ul class="flex gap-5 justify-around items-center">
+        <li>
+          <a href="#">
+            <img src="./assets/social-links/instagram.svg" alt="Logo do instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/social-links/facebook.svg" alt="Logo do instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/social-links/youtube.svg" alt="Logo do instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/social-links/tiktok.svg" alt="Logo do instagram" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <ul class="flex flex-col gap-4">
+      <li class="font-bold">
+        <a href="">
+          Institucional
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Sobre Nós
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Nossas lojas
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Privacidade e Segurança
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Termos e condições
+        </a>
+      </li>
+    </ul>
+    <ul class="flex flex-col gap-4">
+      <li class="font-bold">
+        <a href="">
+          Central de ajuda
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Fale Conosco
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Frete e Entrega
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Trocas e Devoluções
+        </a>
+      </li>
+      <li>
+        <a href="">
+          Formas de Pagamento
+        </a>
+      </li>
+      <li>
+        <a href="">
+          FAQ
+        </a>
+      </li>
+    </ul>
+    <ul class="flex flex-col gap-4">
+      <li class="font-bold">
+          Atendimento
+      </li>
+      <li>
+         <b>Telefone:</b> (00) 1234-5678
+      </li>
+      <li>
+        <b>E-mail:</b> exemplo@exemplo.com.br
+      </li>
+      <li>
+        <b>Horário de atendimento:</b><br>
+          Segunda a Sábado: 07h00 às 23h00<br>
+          Domingos e Feriados:  07h00 às 21h00
+      </li>
+    </ul>
+  </div>
+<div>
+<ul class="flex gap-10 justify-center">
+  <li>
+    <img src="./assets/payments/amex.svg" alt="Logo Amex" />
+  </li>
+  <li>
+    <img src="./assets/payments/mastercard.svg" alt="Logo Mastercard" />
+  </li>
+  <li>
+    <img src="./assets/payments/visa.svg" alt="Logo Visa" />
+  </li>
+  <li>
+    <img src="./assets/payments/hipercard.svg" alt="Logo Hipercard" />
+  </li>
+  <li>
+    <img src="./assets/payments/elo.svg" alt="Logo Elo" />
+  </li>
+  <li>
+    <img src="./assets/payments/dinners.svg" alt="Logo Dinners" />
+  </li>
+  <li>
+    <img src="./assets/payments/paypal.svg" alt="Logo Paypal" />
+  </li>
+  <li>
+    <img src="./assets/payments/pix.svg" alt="Logo Pix" />
+  </li>
+  <li>
+    <img src="./assets/payments/boleto.svg" alt="Logo Boleto" />
+  </li>
+</ul>
+</div>
+  </section>
+    </main>
+    <footer>
+      <div class="flex flex-col text-center justify-center items-center">
+        <p class="w-[1000px] text-[12px]">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+      </div>
+      
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

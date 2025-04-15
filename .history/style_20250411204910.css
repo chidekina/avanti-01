@@ -1,0 +1,37 @@
+:root {
+    font-family: "Nunito Sans", sans-serif;
+    --primary-color: #005CFF;
+    --secondary-color: #6220C1;
+    --text-color: #4F4F4F;
+    --bg-color: #E7E7EA;
+    --bg-dark: #C2C2C2;
+    --bg-light: #DEDEDE;
+    --bg-lighter: #F5F5F5;
+    --font-secondary: "Nunito", sans-serif;
+}
+
+#dropdown-content {
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#categories-list li:hover img,
+#categories-list li.active img {
+    content: url('./assets/arrow-active.svg');
+    transform: scale(1.1);
+}
+
+#categories-list li.selected {
+    color: var(--primary-color); /* Replace with your desired color */
+    font-weight: bold;
+}
+
+#categories-list li.selected img {
+    content: url('./assets/arrow-active.svg'); /* Replace with the active image path */
+    transform: scale(1.1); /* Optional: Add a scaling effect */
+}
+
+.sublist {
+    transition-duration: 0.5s;
+}

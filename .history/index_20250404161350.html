@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Avanti</title>
+  </head>
+  <body>
+    <header class="mb-2">
+      <h1 class="flex justify-center items-center bg-(--primary-color) text-white text-sm h-[30px] font-bold">
+        Ganhe
+        <b class="flex justify-center mx-1 bg-[#6220C1] heigth-[16px] w-[64px] rounded-md">R$10,00</b>
+        de desconto no seu primeiro pedido. Utilize o cupom
+        <i class="font-normal ml-1">DESCONTO10</i>
+      </h1>
+      <div class="mt-3 mb-5 px-24 flex justify-between w-full">
+        <div class="flex gap-24">
+          <img src="./assets/logo.svg" alt="Avanti Logo" class="w-[152px]" />
+          <label>
+            <div class="flex justify-between py-2 border-2 border-solid border-(--bg-color) px-8 rounded-xl cursor-text w-[594px]">
+              <input type="text" placeholder="Digite aqui o que você procura" class="placeholder-black outline-none focus:placeholder-transparent w-1/2" />
+              <img src="./assets/search.svg" />
+            </div>
+          </label>
+        </div>
+        <div class="flex gap-4">
+          <div class="flex gap-2 items-center">
+            <img src="./assets/user.svg" alt="icone do usuario" class="w-[24px]" />
+            <h6 class="leading-none font-semibold">
+              Olá,<br />
+              Nome cliente
+            </h6>
+          </div>
+          <div class="flex">
+            <img src="./assets/cart.svg" alt="imagem de um carrinho de compras" class="w-[32px]" />
+            <div class="relative bg-(--primary-color) w-[20px] h-[20px] text-center text-white text-[12px] rounded-full right-2">2</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex px-24 w-full">
+        <ul class="flex gap-9">
+          <a href="#">
+            <div class="flex gap-2">
+              <img src="./assets/menu-hamburger.svg" alt="menu hamburguer" />
+              <h5 class="font-bold">Todas as Categrias</h5>
+            </div>
+          </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+          <a href="#"> Departamento </a>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="flex justify-center items-center w-full height-[510px] bg-(--bg-color) font-(--font-secondary)">
+        <img src="./assets/chair.svg" alt="Foto de uma cadeira com roupas dobradas em cima" />
+        <div class="flex flex-col gap-1 text-center">
+          <h1 class="text-[100px]"><b>SUPER</b>SALE</h1>
+          <h4 class="text-[25px] text-(--primary-color) font-bold tracking-widest">ITENS SELECIONADOS COM ATÉ</h4>
+          <h4 class="text-[60px] text-(--primary-color) font-bold">50%OFF</h4>
+        </div>
+      </section>
+      <section class="py-[80px] px-[260px]">
+        <div>
+          <div class="flex justify-between mb-4">
+            <h3 class="font-bold font-[20px]">Lançamentos</h3>
+            <h4>Ver mais</h4>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+            
+            </div>
+          </div>
+          <ul class="grid grid-cols-5 gap-2">
+            <li class="border border-[#DDDDDD] py-1 px-1 rounded-md">
+              <div class="absolute">
+                <h6 class="flex justify-center items-center bg-[#00264E] text-white text-[10px] w-[42px] h-[20px] rounded-sm">NOVO</h6>
+              </div>
+              <img src="./assets/model.svg" alt="Modelo com camisa branca basica" />
+              <div class="mt-2">
+                <h3 class="text-[#303030] text-[12px] mb-1 leading-none">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+              </div>
+              <div class="flex gap-1">
+                <div>
+                  <h4 class="text-[#303030] text-[10px] line-through leading-none">R$ 100,00</h4>
+                  <h4 class="text-[14px] font-bold tracking-tight">R$ 79,90</h4>
+                </div>
+                <div class="flex justify-center items-center bg-[#5EC0BE] text-white underline text-[8px] w-[52px] h-[16px] rounded-sm tracking-tight">10% OFF</div>
+              </div>
+              <h6 class="text-[10px]">Ou em até <b>10x de R$ 7,90</b></h6>
+              <button class="w-full bg-(--primary-color) text-white rounded-md text-[12px] h-[30px]">Comprar</button>
+            </li>
+            <li class="border border-[#DDDDDD] py-1 px-1 rounded-md">
+              <div class="absolute">
+                <h6 class="flex justify-center items-center bg-[#00264E] text-white text-[10px] w-[42px] h-[20px] rounded-sm">NOVO</h6>
+              </div>
+              <img src="./assets/model.svg" alt="Modelo com camisa branca basica" />
+              <div class="mt-2">
+                <h3 class="text-[#303030] text-[12px] mb-1 leading-none">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+              </div>
+              <div class="flex gap-1">
+                <div>
+                  <h4 class="text-[#303030] text-[10px] line-through leading-none">R$ 100,00</h4>
+                  <h4 class="text-[14px] font-bold tracking-tight">R$ 79,90</h4>
+                </div>
+                <div class="flex justify-center items-center bg-[#5EC0BE] text-white underline text-[8px] w-[52px] h-[16px] rounded-sm tracking-tight">10% OFF</div>
+              </div>
+              <h6 class="text-[10px]">Ou em até <b>10x de R$ 7,90</b></h6>
+              <button class="w-full bg-(--primary-color) text-white rounded-md text-[12px] h-[30px]">Comprar</button>
+            </li>
+            <li class="border border-[#DDDDDD] py-1 px-1 rounded-md">
+              <div class="absolute">
+                <h6 class="flex justify-center items-center bg-[#00264E] text-white text-[10px] w-[42px] h-[20px] rounded-sm">NOVO</h6>
+              </div>
+              <img src="./assets/model.svg" alt="Modelo com camisa branca basica" />
+              <div class="mt-2">
+                <h3 class="text-[#303030] text-[12px] mb-1 leading-none">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+              </div>
+              <div class="flex gap-1">
+                <div>
+                  <h4 class="text-[#303030] text-[10px] line-through leading-none">R$ 100,00</h4>
+                  <h4 class="text-[14px] font-bold tracking-tight">R$ 79,90</h4>
+                </div>
+                <div class="flex justify-center items-center bg-[#5EC0BE] text-white underline text-[8px] w-[52px] h-[16px] rounded-sm tracking-tight">10% OFF</div>
+              </div>
+              <h6 class="text-[10px]">Ou em até <b>10x de R$ 7,90</b></h6>
+              <button class="w-full bg-(--primary-color) text-white rounded-md text-[12px] h-[30px]">Comprar</button>
+            </li>
+            <li class="border border-[#DDDDDD] py-1 px-1 rounded-md">
+              <div class="absolute">
+                <h6 class="flex justify-center items-center bg-[#00264E] text-white text-[10px] w-[42px] h-[20px] rounded-sm">NOVO</h6>
+              </div>
+              <img src="./assets/model.svg" alt="Modelo com camisa branca basica" />
+              <div class="mt-2">
+                <h3 class="text-[#303030] text-[12px] mb-1 leading-none">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+              </div>
+              <div class="flex gap-1">
+                <div>
+                  <h4 class="text-[#303030] text-[10px] line-through leading-none">R$ 100,00</h4>
+                  <h4 class="text-[14px] font-bold tracking-tight">R$ 79,90</h4>
+                </div>
+                <div class="flex justify-center items-center bg-[#5EC0BE] text-white underline text-[8px] w-[52px] h-[16px] rounded-sm tracking-tight">10% OFF</div>
+              </div>
+              <h6 class="text-[10px]">Ou em até <b>10x de R$ 7,90</b></h6>
+              <button class="w-full bg-(--primary-color) text-white rounded-md text-[12px] h-[30px]">Comprar</button>
+            </li>
+            <li class="border border-[#DDDDDD] py-1 px-1 rounded-md">
+              <div class="absolute">
+                <h6 class="flex justify-center items-center bg-[#00264E] text-white text-[10px] w-[42px] h-[20px] rounded-sm">NOVO</h6>
+              </div>
+              <img src="./assets/model.svg" alt="Modelo com camisa branca basica" />
+              <div class="mt-2">
+                <h3 class="text-[#303030] text-[12px] mb-1 leading-none">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+              </div>
+              <div class="flex gap-1">
+                <div>
+                  <h4 class="text-[#303030] text-[10px] line-through leading-none">R$ 100,00</h4>
+                  <h4 class="text-[14px] font-bold tracking-tight">R$ 79,90</h4>
+                </div>
+                <div class="flex justify-center items-center bg-[#5EC0BE] text-white underline text-[8px] w-[52px] h-[16px] rounded-sm tracking-tight">10% OFF</div>
+              </div>
+              <h6 class="text-[10px]">Ou em até <b>10x de R$ 7,90</b></h6>
+              <button class="w-full bg-(--primary-color) text-white rounded-md text-[12px] h-[30px]">Comprar</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

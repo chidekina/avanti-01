@@ -47,12 +47,12 @@ html, body {
 }
 
 .selected {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Replace with your desired color */
     font-weight: bold;
 }
 
 #categories-list li.selected img {
-    content: url('./assets/arrow-active.svg'); 
+    content: url('./assets/arrow-active.svg'); /* Replace with the active image path */
     transform: scale(1.1); 
 }
 
@@ -69,7 +69,6 @@ html, body {
 
 #dropdown-menu {
     top: 100px; 
-    right: 210px; 
+    right: 280px; 
     z-index: 1000;
-    width: 50%;
   }

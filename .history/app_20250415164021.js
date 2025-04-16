@@ -231,10 +231,3 @@ document.querySelectorAll('.toggle-item').forEach(item => {
     }
   });
 });
-
-const menuHamburger = document.getElementById("menu-hamburger");
-const dropdownMenu = document.getElementById("dropdown-menu");
-
-menuHamburger.addEventListener("click", () => {
-  dropdownMenu.classList.toggle("hidden");
-});

@@ -1,23 +1,23 @@
 class Carousel extends HTMLElement {
-    constructor() {
-      super();
-    }
-  
-    connectedCallback() {
-      this.render();
-      this.initSlides();
-      this.initSwiper();
-    }
-  
-render() {
-  this.innerHTML = `
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.render();
+    this.initSlides();
+    this.initSwiper();
+  }
+
+  render() {
+    this.innerHTML = `
     <section class="py-[80px] px-[150px] max-md:py-[40px] max-md:px-[20px]">
       <div>
         <div class="flex justify-between mb-4 items-center">
           <h3 class="font-bold text-[20px] max-md:text-[16px]">Lançamentos</h3>
           <a href="#" class="font-bold max-md:underline max-md:mt-2 text-[16px] max-md:text-[14px]">Ver mais</a>
         </div>
-        <div class="swiper">
+<div class="swiper custom-swiper">
           <div class="swiper-container">
             <ul class="swiper-wrapper" id="swiper-wrapper"></ul>
             <div class="swiper-button-next"></div>
@@ -28,13 +28,13 @@ render() {
       </div>
     </section>
   `;
-    }
-  
-    initSlides() {
-      const swiperWrapper = this.querySelector("#swiper-wrapper");
-  
-      for (let i = 1; i <= 15; i++) {
-        const slide = `
+  }
+
+  initSlides() {
+    const swiperWrapper = this.querySelector("#swiper-wrapper");
+
+    for (let i = 1; i <= 15; i++) {
+      const slide = `
           <li class="swiper-slide border border-[#DDDDDD] py-1 px-1 rounded-md" style="min-width: 200px;">
             <div class="absolute">
               <h6 class="flex justify-center items-center bg-[#00264E] text-white text-[10px] w-[42px] h-[20px] rounded-sm">
@@ -62,27 +62,27 @@ render() {
             </button>
           </li>
         `;
-        swiperWrapper.insertAdjacentHTML("beforeend", slide);
-      }
-    }
-  
-    initSwiper() {
-      new Swiper(this.querySelector(".swiper-container"), {
-        slidesPerView: 5,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: this.querySelector(".swiper-button-next"),
-          prevEl: this.querySelector(".swiper-button-prev"),
-        },
-        pagination: {
-          el: this.querySelector(".swiper-pagination"),
-          clickable: true,
-        },
-      });
+      swiperWrapper.insertAdjacentHTML("beforeend", slide);
     }
   }
-  
-  customElements.define("carousel-section", Carousel);
+
+  initSwiper() {
+    new Swiper(this.querySelector(".swiper-container"), {
+      slidesPerView: 5,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: this.querySelector(".swiper-button-next"),
+        prevEl: this.querySelector(".swiper-button-prev"),
+      },
+      pagination: {
+        el: this.querySelector(".swiper-pagination"),
+        clickable: true,
+      },
+    });
+  }
+}
+
+customElements.define("carousel-section", Carousel);
 
 class Description extends HTMLElement {
   connectedCallback() {
@@ -103,29 +103,29 @@ class Description extends HTMLElement {
         </section>
         `;
   }
-};
+}
 
 customElements.define("description-section", Description);
 
-const categories = document.getElementById('categories-list'); 
-const dropdown = document.getElementById('dropdown-content');
-const allCategories = document.getElementById('menu-button');
-const depList = document.getElementById('department-list');
-const depContent = document.getElementById('department-content');
-const depContentList = document.getElementById('department-content-list');
-const depNumber = document.getElementById('department-number');
+const categories = document.getElementById("categories-list");
+const dropdown = document.getElementById("dropdown-content");
+const allCategories = document.getElementById("menu-button");
+const depList = document.getElementById("department-list");
+const depContent = document.getElementById("department-content");
+const depContentList = document.getElementById("department-content-list");
+const depNumber = document.getElementById("department-number");
 
 for (let i = 1; i <= 7; i++) {
-  const li = document.createElement('li');
+  const li = document.createElement("li");
   li.innerHTML = `
     <a href="#" id="dep-${i}" class="hover:font-bold hover:text-(--primary-color)"> Departamento </a>
   `;
 
   li.onclick = () => {
-    const allItems = depList.querySelectorAll('li');
-    allItems.forEach(item => item.classList.remove('selected'));
+    const allItems = depList.querySelectorAll("li");
+    allItems.forEach((item) => item.classList.remove("selected"));
 
-    dropdown.classList.add('hidden');
+    dropdown.classList.add("hidden");
 
     generateDepartmentContent(i);
   };
@@ -134,35 +134,35 @@ for (let i = 1; i <= 7; i++) {
 }
 
 function generateDepartmentContent(departmentId) {
-  const currentVisibleId = depContent.getAttribute('data-visible-id');
+  const currentVisibleId = depContent.getAttribute("data-visible-id");
   if (currentVisibleId === departmentId.toString()) {
-    depContent.classList.add('hidden');
-    depContent.removeAttribute('data-visible-id');
+    depContent.classList.add("hidden");
+    depContent.removeAttribute("data-visible-id");
     return;
   }
 
-  depContent.setAttribute('data-visible-id', departmentId);
-  depContent.classList.remove('hidden');
+  depContent.setAttribute("data-visible-id", departmentId);
+  depContent.classList.remove("hidden");
 
-  depContentList.innerHTML = '';
-  const depTitle = depNumber.querySelector('h2');
+  depContentList.innerHTML = "";
+  const depTitle = depNumber.querySelector("h2");
   if (depTitle) {
     depNumber.removeChild(depTitle);
   }
 
-  const h2 = document.createElement('h2');
-  h2.className = 'font-bold mt-4 mb-2';
+  const h2 = document.createElement("h2");
+  h2.className = "font-bold mt-4 mb-2";
   h2.textContent = `Departamento ${departmentId}`;
   depNumber.prepend(h2);
 
   for (let col = 1; col <= 3; col++) {
-    const ul = document.createElement('ul');
-    ul.className = 'flex flex-col gap-1 text-[14px]';
+    const ul = document.createElement("ul");
+    ul.className = "flex flex-col gap-1 text-[14px]";
 
     for (let item = 1; item <= 8; item++) {
-      const li = document.createElement('li');
-      li.className = 'first:font-bold first:text-(--primary-color) hover:font-bold hover:text-(--primary-color)';
-      li.textContent = 'Categoria';
+      const li = document.createElement("li");
+      li.className = "first:font-bold first:text-(--primary-color) hover:font-bold hover:text-(--primary-color)";
+      li.textContent = "Categoria";
       ul.appendChild(li);
     }
 
@@ -171,45 +171,45 @@ function generateDepartmentContent(departmentId) {
 }
 
 allCategories.onclick = () => {
-  if (dropdown.classList.contains('hidden')) {
-    dropdown.classList.remove('hidden');
-    depContent.classList.add('hidden');
+  if (dropdown.classList.contains("hidden")) {
+    dropdown.classList.remove("hidden");
+    depContent.classList.add("hidden");
   } else {
-    dropdown.classList.add('hidden');
+    dropdown.classList.add("hidden");
   }
 };
- 
+
 for (let i = 1; i <= 15; i++) {
-  const li = document.createElement('li');
+  const li = document.createElement("li");
   li.id = i;
-  li.className = 'flex justify-between hover:text-(--primary-color) hover:font-bold';
+  li.className = "flex justify-between hover:text-(--primary-color) hover:font-bold";
   li.innerHTML = `
     <p>Departamento</p>
     <img src="./assets/arrow.svg" alt="imagem de flecha" />
   `;
 
-  li.addEventListener('click', () => {
-    const allItems = categories.querySelectorAll('li');
-    allItems.forEach(item => item.classList.remove('selected'));
+  li.addEventListener("click", () => {
+    const allItems = categories.querySelectorAll("li");
+    allItems.forEach((item) => item.classList.remove("selected"));
 
-    li.classList.add('selected');
+    li.classList.add("selected");
 
-    const existingSublist = dropdown.querySelector('.sublist-container');
+    const existingSublist = dropdown.querySelector(".sublist-container");
     if (existingSublist) {
       dropdown.removeChild(existingSublist);
     }
 
-    const sublistContainer = document.createElement('div');
-    sublistContainer.className = 'flex relative gap-[100px] right-50 mt-4 sublist-container';
+    const sublistContainer = document.createElement("div");
+    sublistContainer.className = "flex relative gap-[100px] right-50 mt-4 sublist-container";
 
     // Create 3 lists
     for (let i = 1; i <= 3; i++) {
-      const sublist = document.createElement('ul');
-      sublist.className = 'flex flex-col gap-3 sublist text-(--sub-text)';
+      const sublist = document.createElement("ul");
+      sublist.className = "flex flex-col gap-3 sublist text-(--sub-text)";
 
       for (let j = 1; j <= 8; j++) {
-        const subItem = document.createElement('li');
-        subItem.className = 'hover:text-(--primary-color) hover:font-bold first:text-(--primary-color) first:font-bold';
+        const subItem = document.createElement("li");
+        subItem.className = "hover:text-(--primary-color) hover:font-bold first:text-(--primary-color) first:font-bold";
         subItem.textContent = `Categoria ${li.id}`;
         sublist.appendChild(subItem);
       }
@@ -223,18 +223,11 @@ for (let i = 1; i <= 15; i++) {
   categories.appendChild(li);
 }
 
-document.querySelectorAll('.toggle-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const list = item.querySelector('.toggle-list');
+document.querySelectorAll(".toggle-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    const list = item.querySelector(".toggle-list");
     if (list) {
-      list.classList.toggle('hidden');
+      list.classList.toggle("hidden");
     }
   });
-});
-
-const menuHamburger = document.getElementById("menu-hamburger");
-const dropdownMenu = document.getElementById("dropdown-menu");
-
-menuHamburger.addEventListener("click", () => {
-  dropdownMenu.classList.toggle("hidden");
 });

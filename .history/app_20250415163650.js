@@ -22,7 +22,7 @@ render() {
             <ul class="swiper-wrapper" id="swiper-wrapper"></ul>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination absolute top-20"></div>
           </div>
         </div>
       </div>
@@ -230,11 +230,4 @@ document.querySelectorAll('.toggle-item').forEach(item => {
       list.classList.toggle('hidden');
     }
   });
-});
-
-const menuHamburger = document.getElementById("menu-hamburger");
-const dropdownMenu = document.getElementById("dropdown-menu");
-
-menuHamburger.addEventListener("click", () => {
-  dropdownMenu.classList.toggle("hidden");
 });

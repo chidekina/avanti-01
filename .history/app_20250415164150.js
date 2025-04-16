@@ -17,7 +17,7 @@ render() {
           <h3 class="font-bold text-[20px] max-md:text-[16px]">Lançamentos</h3>
           <a href="#" class="font-bold max-md:underline max-md:mt-2 text-[16px] max-md:text-[14px]">Ver mais</a>
         </div>
-        <div class="swiper">
+<div class="swiper custom-swiper">
           <div class="swiper-container">
             <ul class="swiper-wrapper" id="swiper-wrapper"></ul>
             <div class="swiper-button-next"></div>
@@ -230,11 +230,4 @@ document.querySelectorAll('.toggle-item').forEach(item => {
       list.classList.toggle('hidden');
     }
   });
-});
-
-const menuHamburger = document.getElementById("menu-hamburger");
-const dropdownMenu = document.getElementById("dropdown-menu");
-
-menuHamburger.addEventListener("click", () => {
-  dropdownMenu.classList.toggle("hidden");
 });

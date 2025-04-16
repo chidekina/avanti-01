@@ -79,7 +79,16 @@ render() {
           clickable: true,
         },
       });
-    }
+    
+      // Move pagination to the bottom
+      const pagination = this.querySelector(".swiper-pagination");
+      if (pagination) {
+        pagination.style.position = "absolute";
+        pagination.style.bottom = "-20px"; // Adjust as needed
+        pagination.style.left = "0";
+        pagination.style.width = "100%";
+        pagination.style.textAlign = "center";
+      }
   }
   
   customElements.define("carousel-section", Carousel);
@@ -230,11 +239,4 @@ document.querySelectorAll('.toggle-item').forEach(item => {
       list.classList.toggle('hidden');
     }
   });
-});
-
-const menuHamburger = document.getElementById("menu-hamburger");
-const dropdownMenu = document.getElementById("dropdown-menu");
-
-menuHamburger.addEventListener("click", () => {
-  dropdownMenu.classList.toggle("hidden");
 });

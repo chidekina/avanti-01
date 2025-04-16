@@ -47,7 +47,7 @@ html, body {
 }
 
 .selected {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Replace with your desired color */
     font-weight: bold;
 }
 
@@ -69,7 +69,6 @@ html, body {
 
 #dropdown-menu {
     top: 100px; 
-    right: 210px; 
+    right: 280px; 
     z-index: 1000;
-    width: 50%;
   }

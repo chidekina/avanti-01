@@ -11,11 +11,11 @@ class Carousel extends HTMLElement {
   
 render() {
   this.innerHTML = `
-    <section class="py-[80px] px-[150px] max-md:py-[40px] max-md:px-[20px] max-xl:px-[50px]">
+    <section class="py-[80px] px-[150px] max-3xl:py-[40px] max-3xl:px-[20px]">
       <div>
         <div class="flex justify-between mb-4 items-center">
-          <h3 class="font-bold text-[20px] max-md:text-[16px]">Lançamentos</h3>
-          <a href="#" class="font-bold max-md:underline max-md:mt-2 text-[16px] max-md:text-[14px]">Ver mais</a>
+          <h3 class="font-bold text-[20px] max-3xl:text-[16px]">Lançamentos</h3>
+          <a href="#" class="font-bold max-3xl:underline max-3xl:mt-2 text-[16px] max-3xl:text-[14px]">Ver mais</a>
         </div>
         <div class="swiper">
           <div class="swiper-container">
@@ -87,15 +87,15 @@ render() {
 class Description extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-     <section class="flex max-md:flex-col px-[200px] gap-5 items-center max-md:px-0 max-xl:px-[40px]">
+     <section class="flex max-3xl:flex-col px-[200px] gap-5 items-center max-3xl:px-0">
         <div class="flex bg-(--bg-dark) justify-center items-center">
             <img src="./assets/mug.svg" alt="Foto de uma caneca da Avanti" />
         </div>
-        <div class="font-(--font-secondary) w-1/2 max-md:w-4/5">
-            <h1 class="font-bold text-[30px] max-md:m-3">
+        <div class="font-(--font-secondary) w-1/2 max-3xl:w-4/5">
+            <h1 class="font-bold text-[30px] max-3xl:m-3">
           LOREM IPSUM
             </h1>
-            <p class="text-[12px] max-md:leading-5">
+            <p class="text-[12px] max-3xl:leading-5">
                 Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.<br></br>
                 Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.                                    
             </p>

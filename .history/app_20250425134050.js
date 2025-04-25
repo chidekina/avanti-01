@@ -11,7 +11,7 @@ class Carousel extends HTMLElement {
   
 render() {
   this.innerHTML = `
-    <section class="py-[80px] px-[150px] max-md:py-[40px] max-md:px-[20px] max-xl:px-[50px]">
+    <section class="py-[80px] px-[150px] max-md:py-[40px] max-md:px-[20px]">
       <div>
         <div class="flex justify-between mb-4 items-center">
           <h3 class="font-bold text-[20px] max-md:text-[16px]">Lançamentos</h3>
@@ -35,7 +35,7 @@ render() {
   
       for (let i = 1; i <= 15; i++) {
         const slide = `
-          <li class="swiper-slide border border-[#DDDDDD] py-1 px-1 rounded-md cursor-pointer hover:scale-105" style="min-width: 200px;">
+          <li class="swiper-slide border border-[#DDDDDD] py-1 px-1 rounded-md" style="min-width: 200px hover:scale-125">
             <div class="absolute">
               <h6 class="flex justify-center items-center bg-[#00264E] text-white text-[10px] w-[42px] h-[20px] rounded-sm">
                 NOVO
@@ -87,7 +87,7 @@ render() {
 class Description extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-     <section class="flex max-md:flex-col px-[200px] gap-5 items-center max-md:px-0 max-xl:px-[40px]">
+     <section class="flex max-md:flex-col px-[200px] gap-5 items-center max-md:px-0">
         <div class="flex bg-(--bg-dark) justify-center items-center">
             <img src="./assets/mug.svg" alt="Foto de uma caneca da Avanti" />
         </div>

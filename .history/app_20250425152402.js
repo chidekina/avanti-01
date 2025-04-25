@@ -87,7 +87,7 @@ render() {
 class Description extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-     <section class="flex max-md:flex-col px-[200px] gap-5 items-center max-md:px-0 max-xl:px-[40px]">
+     <section class="flex max-md:flex-col px-[200px] gap-5 items-center max-md:px-0">
         <div class="flex bg-(--bg-dark) justify-center items-center">
             <img src="./assets/mug.svg" alt="Foto de uma caneca da Avanti" />
         </div>
